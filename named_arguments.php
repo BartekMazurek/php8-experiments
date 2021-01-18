@@ -51,3 +51,39 @@ $example = new NamedArgumentsClassExample(
 
 echo $example->getFirstProperty() . PHP_EOL;
 echo $example->getSecondProperty() . PHP_EOL;
+
+
+// CLASS 2
+
+class Product {
+
+    private string $name;
+    private float $price;
+
+    public function __construct(
+        string $name,
+        float $price
+    ) {
+        $this->name = $name;
+        $this->price = $price;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getPrice(): float
+    {
+        return $this->price;
+    }
+}
+
+$productProperties = [
+  'name' => 'Shoes',
+  'price' => 10.99
+];
+
+$product = new Product(...$productProperties);
+echo $product->getName() . PHP_EOL;
+echo $product->getPrice() . PHP_EOL;
