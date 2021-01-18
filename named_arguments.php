@@ -87,3 +87,53 @@ $productProperties = [
 $product = new Product(...$productProperties);
 echo $product->getName() . PHP_EOL;
 echo $product->getPrice() . PHP_EOL;
+
+
+// CLASS 3
+
+class Customer {
+
+    private string $firstName;
+    private string $lastName;
+    private string $email;
+
+    public function __construct(
+      string $firstName,
+      string $lastName,
+      string $email
+    ) {
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->email = $email;
+    }
+
+    public function getFirstName(): string
+    {
+        return $this->firstName;
+    }
+
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public static function new(...$properties): self
+    {
+        return new self(...$properties);
+    }
+}
+
+$customer = Customer::new(
+    firstName: 'Bartek',
+    lastName: 'Mazurek',
+    email: 'bartlomiejmazurek9@gmail.com'
+);
+
+echo $customer->getFirstName() . PHP_EOL;
+echo $customer->getLastName() . PHP_EOL;
+echo $customer->getEmail() . PHP_EOL;
