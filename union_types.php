@@ -1,6 +1,7 @@
 <?php
 
-class UnionTypesExample {
+class UnionTypesExample
+{
 
     private int|string $id;
 
@@ -22,4 +23,3 @@ echo $example->getId() . PHP_EOL;
 $id2 = '2';
 $example2 = new UnionTypesExample($id2);
 echo $example2->getId() . PHP_EOL;
-

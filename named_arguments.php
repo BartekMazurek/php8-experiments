@@ -20,8 +20,8 @@ namedArgumentsExample(
 
 // CLASS
 
-class NamedArgumentsClassExample {
-
+class NamedArgumentsClassExample
+{
     private string $firstProperty;
     private string $secondProperty;
 
@@ -55,8 +55,8 @@ echo $example->getSecondProperty() . PHP_EOL;
 
 // CLASS 2
 
-class Product {
-
+class Product
+{
     private string $name;
     private float $price;
 
@@ -91,8 +91,8 @@ echo $product->getPrice() . PHP_EOL;
 
 // CLASS 3
 
-class Customer {
-
+class Customer
+{
     private string $firstName;
     private string $lastName;
     private string $email;
